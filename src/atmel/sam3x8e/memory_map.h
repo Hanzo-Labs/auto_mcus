@@ -1,25 +1,15 @@
-#ifndef __AUTO_MCU_SAM3x8E_MEMORY_MAP_H__
-#define __AUTO_MCU_SAM3x8E_MEMORY_MAP_H__
+#ifndef __ATSAM3X8E_MEMORY_MAP_H__
+#define __ATSAM3X8E_MEMORY_MAP_H__
 
-namespace auto_os {
+#define ATSAM3X8E_BOOT_MEMORY       0x00000000
+#define ATSAM3X8E_INTERNAL_FLASH0   0x00080000
+#define ATSAM3X8E_INTERNAL_FLASH1   
+#define ATSAM3X8E_INTERNAL_ROM      0x00100000
+#define ATASM3X8E_RESERVED          0x00200000
 
-namespace mcu {
-
-struct memory_map {
-    chip_id_register chip_id;
-};
-
-// SAM3X8E register map
-static struct memory_map mmap;
-
-mmap.chip_id.chip_id_reg      = 0x285E0A60;
-mmap.chip_id.chip_ext_id_reg  = 0x285E0A60 + 0x04;
-
-}
-
-}
-
-}
+#define ATSAM3X8E_PERIPHERAL_HSMCI  0x40000000
+#define ATSAM3X8E_PERIPHERAL_TRNG   0x400BC000
 
 #endif
+
 
